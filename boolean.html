@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<div id="h"></div>
 <body>
-    <script>
-     if(buttonBoolean == false){
-         if(points >= 50){
-             display.block
-         }
-     }
-    
 
+<script>
+    var h = document.getElementById("h");
+tid()
 
+function tid() {
+var x = new Date();
+var d = x.getTime();
+h.innerHTML = d
+}
     </script>
 </body>
 </html>
