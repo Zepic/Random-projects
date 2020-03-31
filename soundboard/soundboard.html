@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      .mainContent{
+            background-color: gray;
+            border-style:solid;
+            height: 200px;
+       }
+       .knapp1{
+           height: 80px;
+           width: 100px;
+           background-color: indigo;
+           border-style: none;
+       }
+       .knapp2{
+           height: 80px;
+           width: 100px;
+           background-color: rgb(0, 113, 128);
+           border-style: none;
+           
+       }
+       .knapp3{
+           height: 80px;
+           width: 100px;
+           background-color: green;
+           border-style: none;
+       }
+       .knapp4{
+           height: 80px;
+           width: 100px;
+           background-color: rgb(0, 70, 128);
+           border-style: none;
+           
+       }
+       .knapp5{
+           height: 80px;
+           width: 100px;
+           background-color: rgb(128, 0, 85);
+           border-style: none;
+       }
+       .knapp6{
+           height: 80px;
+           width: 100px;
+           background-color: rgb(168, 135, 143);
+           border-style: none;
+       }
+    </style>
+</head>
+<body> 
+    <!--
+        class
+        border
+        height
+        width
+    -->
+<div class="mainContent">
+    <button class="knapp1" onclick="makeNoise(1)">1</button>
+    <button class="knapp2" onclick="makeNoise(2)">2</button>
+    <button class="knapp3" onclick="makeNoise(3)">3</button>
+    <button class="knapp4" onclick="makeNoise(4)">4</button>
+    <button class="knapp5" onclick="makeNoise(5)">5</button>
+    <button class="knapp6" onclick="makeNoise(6)">6</button>
+</div>
+    <audio id="glimmerAudio" src="glimmer.mp3"></audio>
+    <audio id="moonAudio" src="moon.mp3">Moon</audio>
+    <audio id="confettiAudio" src="confetti.mp3">Moon</audio>
+    <audio id="bubblesAudio" src="bubbles.mp3">Moon</audio>
+    <audio id="clayAudio" src="clay.mp3">Moon</audio>
+    <audio id="ufoAudio" src="ufo.mp3">Moon</audio>
+    
+    <script>
+
+        a = document.getElementById("glimmerAudio");
+        b = document.getElementById("moonAudio");
+        c = document.getElementById("confettiAudio");
+        d = document.getElementById("bubblesAudio");
+        e = document.getElementById("clayAudio");
+        f = document.getElementById("ufoAudio");
+        
+        function makeNoise(number) {
+            if(number == 1){
+                a.play();
+            }
+            else if(number == 2){
+                b.play();
+            }
+            else if(number == 3){
+                c.play();
+            }
+            else if(number == 4){
+                d.play();
+            }
+            else if(number == 5){
+                e.play();
+            }
+            else if(number == 6){
+                f.play();
+            }
+        }
+
+    
+    </script>
+    
+</body>
+</html>
