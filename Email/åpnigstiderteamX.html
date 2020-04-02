@@ -11,6 +11,7 @@
     Minutter: <input id="minute" onchange="showDayAndTime()" type="range" min="0" max="59"/><br/>
 
 <div id="dayAndTime" style="padding-top: 20px;"></div>
+<h1 id="closedOrOpen"></h1>
 <div id="d">Dag - </div>
 <div id="h">Time - </div>
 <div id="m">Minutter - </div>
@@ -20,6 +21,7 @@
     let dayDiv = document.getElementById("d");
     let hourDiv = document.getElementById("h");
     let minuteDiv = document.getElementById("m");
+    let showOpen = document.getElementById('closedOrOpen');
 
     //let testDayName = 
 
@@ -38,18 +40,61 @@
     dayDiv.innerHTML = dayTestName[dayNumber];
     
     }
-//11 - 17
-//11 - 18
-//11 - 15
+    function hourInfo(hour){
+        hourDiv.innerHTML = hour;
+    }
+    
+    function minInfo(minute){
+        minuteDiv.innerHTML = minute;
+    }
+
+    function timeInfo(day, hour, minute) {
+    // Mandag - Torsdag
+    if (day < 4){
+        if (hour >= 11 && hour <= 16 && minute <= 59) {
+        showOpen.innerHTML = "Open"
+        }
+            else 
+            showOpen.innerHTML = "Closed"
+    }
+    // Fredag
+    else if (day == 4){
+        if (hour >= 11 && hour <= 17 && minute <= 59) {
+        showOpen.innerHTML = "Open"
+        }
+            else 
+            showOpen.innerHTML = "Closed"
+    }
+    // Lørdag
+    else if (day == 5){
+        if (hour >= 11 && hour <= 15 && minute <= 30) {
+        showOpen.innerHTML = "Open"
+        }
+            else 
+            showOpen.innerHTML = "Closed"
+    }
+    // Søndag
+    else if (day == 6){
+        showOpen.innerHTML = "Closed"
+    }
+}
+
 function showDayAndTime() {
     var div = document.getElementById('dayAndTime');
     var day = document.getElementById('day').value;
     var hour = document.getElementById('hour').value;
     var minute = document.getElementById('minute').value;
-    var dayNo = parseInt(day);
+    var dayNumber = parseInt(day);
+    var hourNumber = parseInt(hour);
+    var minuteNumber = parseInt(minute);
+    
     dayInfo();
+    hourInfo(hourNumber);
+    minInfo(minuteNumber);
 
-    var testRightDay = dayInfo(dayNo)
+    var testRightDay = dayInfo(dayNumber)
+    //var testhour = hourInfo(hour);
+    var openingTime = timeInfo(dayNumber, hourNumber, minuteNumber);
    
 }
 </script>
