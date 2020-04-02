@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Dag: <input id="day" onchange="showDayAndTime()" type="range" min="0" max="6"/><br/>
+    Time: <input id="hour" onchange="showDayAndTime()" type="range" min="0" max="23"/><br/>
+    Minutter: <input id="minute" onchange="showDayAndTime()" type="range" min="0" max="59"/><br/>
+
+<div id="dayAndTime" style="padding-top: 20px;"></div>
+<div id="d">Dag - </div>
+<div id="h">Time - </div>
+<div id="m">Minutter - </div>
+
+
+<script type="text/javascript">
+    let dayDiv = document.getElementById("d");
+    let hourDiv = document.getElementById("h");
+    let minuteDiv = document.getElementById("m");
+
+    //let testDayName = 
+
+    function dayInfo(dayNumber)  {
+        
+        var dayTestName = new Array(7);
+
+    dayTestName[0] = ['Mandag'];
+    dayTestName[1] = ['Tirsdag'];
+    dayTestName[2] = ['Onsdag'];
+    dayTestName[3] = ['Torsdag'];
+    dayTestName[4] = ['Fredag'];
+    dayTestName[5] = ['Lørdag'];
+    dayTestName[6] = ['Søndag'];
+
+    dayDiv.innerHTML = dayTestName[dayNumber];
+    
+    }
+//11 - 17
+//11 - 18
+//11 - 15
+function showDayAndTime() {
+    var div = document.getElementById('dayAndTime');
+    var day = document.getElementById('day').value;
+    var hour = document.getElementById('hour').value;
+    var minute = document.getElementById('minute').value;
+    var dayNo = parseInt(day);
+    dayInfo();
+
+    var testRightDay = dayInfo(dayNo)
+   
+}
+</script>
+</body>
+</html>
