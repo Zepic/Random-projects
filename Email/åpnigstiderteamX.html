@@ -16,26 +16,14 @@
 <div id="h">Time - </div>
 <div id="m">Minutter - </div>
 
-
 <script type="text/javascript">
     let dayDiv = document.getElementById("d");
     let hourDiv = document.getElementById("h");
     let minuteDiv = document.getElementById("m");
     let showOpen = document.getElementById('closedOrOpen');
-
-    //let testDayName = 
-
     function dayInfo(dayNumber)  {
         
-        var dayTestName = new Array(7);
-
-    dayTestName[0] = ['Mandag'];
-    dayTestName[1] = ['Tirsdag'];
-    dayTestName[2] = ['Onsdag'];
-    dayTestName[3] = ['Torsdag'];
-    dayTestName[4] = ['Fredag'];
-    dayTestName[5] = ['Lørdag'];
-    dayTestName[6] = ['Søndag'];
+    var dayTestName = ['Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag', 'Søndag'];
 
     dayDiv.innerHTML = dayTestName[dayNumber];
     
@@ -93,9 +81,11 @@ function showDayAndTime() {
     minInfo(minuteNumber);
 
     var testRightDay = dayInfo(dayNumber)
-    //var testhour = hourInfo(hour);
     var openingTime = timeInfo(dayNumber, hourNumber, minuteNumber);
-   
+// var d = new Date();
+// var hour = d.getHours();
+// var minute = d.getMinutes();
+// var dayNo = d.getDay();
 }
 </script>
 </body>
