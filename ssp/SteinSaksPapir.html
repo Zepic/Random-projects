@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <div id="anotherDivLife"></div>
+    <div id="divLife"></div>
+    <div id="pappa">
+    <button id="bulbasaur" onclick="selected1()"><img src="001.png" width="250px" alt="Bulbasaur"></button>
+    <button id="charmander" onclick="selected2()"><img src="004.png" width="250px" alt="Charmander"></button>
+    <button id="squirtle" onclick="selected3()"><img src="007.png" width="250px" alt="Squirtle"></button>
+</div>
+<script>
+    let number;
+    number = Math.ceil(Math.random() * 3);
+    console.log(number);
+    let divId = document.getElementById("divLife");
+    let anotherDivId = document.getElementById("anotherDivLife");
+    let userPicked;
+    let pappa = document.getElementById("pappa");
+    function selected1(){
+        var userPicked = 1
+        anotherDivId.innerHTML = "You picked Bulbasaur"
+        if (number == 1) {
+       divId.innerHTML = "Gary picked Bulbasaur"
+    }
+    else if (number == 2) {
+        divId.innerHTML = "Gary picked Charmander"
+    }
+    else if (number == 3) {
+        divId.innerHTML = "Gary picked Squirtle"
+    }
+
+        if (userPicked == 1 && number == 3) {
+            pappa.innerHTML = `<img src='win.jpg' alt='You Won!'>`
+        }
+        if (userPicked == 1 && number == 2) {
+            pappa.innerHTML = `<img src='Loss.jpg' alt='You Lost :('>`
+        }
+        if (userPicked == 1 && number == 1) {
+            pappa.innerHTML = `<img src='Draw.png' alt='Draw!'>`
+        }
+    }
+    function selected2(){
+        var userPicked = 2
+        anotherDivId.innerHTML = "You picked Charmander"
+        if (number == 1) {
+       divId.innerHTML = "Gary picked Bulbasaur"
+    }
+    else if (number == 2) {
+        divId.innerHTML = "Gary picked Charmander"
+    }
+    else if (number == 3) {
+        divId.innerHTML = "Gary picked Squirtle"
+    }
+
+        if (userPicked == 2 && number == 1) {
+            pappa.innerHTML = `<img src='win.jpg' alt='You Won!'>`
+        }
+        else if (userPicked == 2 && number == 3) {
+            pappa.innerHTML = `<img src='Loss.jpg' alt='You Lost :('>`
+        }
+        else if (userPicked == 2 && number == 2) {
+            pappa.innerHTML = `<img src='Draw.png' alt='Draw!'>`
+        }
+    }
+
+    function selected3(){
+        var userPicked = 3
+        anotherDivId.innerHTML = "You picked Squirtle"
+    if (number == 1) {
+       divId.innerHTML = "Gary picked Bulbasaur"
+    }
+    else if (number == 2) {
+        divId.innerHTML = "Gary picked Charmander"
+    }
+    else if (number == 3) {
+        divId.innerHTML = "Gary picked Squirtle"
+    }
+        if (userPicked == 3 && number == 2) {
+            pappa.innerHTML = `<img src='win.jpg' width="200px" alt='You Won!'height: 300px;>`
+        }
+        else if (userPicked == 3 && number == 1) {
+            pappa.innerHTML = `<img src='Loss.jpg' alt='You Lost :('height: 300px;>`
+        }
+        else if (userPicked == 3 && number == 3) {
+            pappa.innerHTML = `<img src='Draw.png' alt='Draw!'height: 300px;>`
+        }
+    }
+  
+</script>
+</body>
+</html>
