@@ -3,7 +3,7 @@ let log = console.log;
 const attackButton = document.getElementById("attackId");
 const powerUpButton = document.getElementById("powerUpId");
 let playerAttack = 400;
-const bossAttack = 100;
+const bossAttack = 50;
 let healCooldown = 3;
 //view
 function show() {
