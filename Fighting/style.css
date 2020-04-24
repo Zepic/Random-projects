@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(to right, hsl(167, 96%, 22%),
+     hsl(230, 96%, 18%));
+}
+
+.playerImg {
+    border: 2px groove teal;
+    height: 400px;
+    width: 750px;
+    position: relative;
+    display: block;
+}
+.bossImg {
+    border: 2px groove midnightblue;
+    height: 400px;
+    width: 750px;
+    float: right;
+    position: relative;
+    display: block;
+}
+
+.show {
+    font-family: sans-serif;
+    color: white;
+    justify-content: center;
+    display: flex;
+    opacity: 70%;
+    
+}
+.health {
+    display: block;
+    border: 2px solid black;
+    width: 754px;
+    height: 30px;
+}
+.boss {
+    background-color: darkred;
+    float: right;
+    position: relative;
+}
+.player {
+    background-color: lime;
+}
+.button {
+    height: 30px;
+    border: solid;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    text-align: center;
+    font-family: Verdana;
+}
+.button1 {
+    border: solid darkkhaki;
+    color: black;
+}
+.button1:hover {
+    background-color: darkkhaki;
+    color: white;
+}
+
+.button2 {
+    border: solid tomato;
+    color: black;
+}
+
+.button2:hover {
+    background-color: tomato;
+    color: white;
+}
+
+.button3 {
+    border: solid violet;
+    color: black;
+}
+
+.button3:hover {
+    background-color: violet;
+    color: white;
+}

@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Wet Nurse boss fight</title>
     <script src="lib.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div id="Main">
-    <img class="boss" src="Nurse.jpg"><br>
-    <button onclick="attack()"id="attackId">Attack the enemy</button>
-    <button onclick="reload()">hei</button>
-
-
-
-        
-    
-
+    <div id="Main" class="main">
+    <img class="bossImg" src="Boss.jpg">
+    <img class="playerImg" src="Player.jpg">
+    <progress class="health boss" id="bossHealth" value="9999" max="9999"></progress>
+    <progress class="health player" id="playerHealth" value="500" max="500"></progress>
+    <button class="button button1" onclick="attack()"id="attackId">Attack the enemy</button>
+    <button class="button button2" onclick="heal()" id="healId">Heal yourself</button>
+    <button class="button button3" onclick="powerUp()" id="powerUpId">Sharpen your blade</button>
+    <div class="show" id="showDiv"></div>
 </div>
-    
-    
     
 </body>
 </html>
